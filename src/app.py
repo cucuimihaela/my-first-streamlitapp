@@ -87,7 +87,7 @@ for type in types[1:]:
                             hover_name='canton_name',
                            hover_data={type: ':.1f', 'code': False},
                            color_continuous_scale='YlGn',
-                           labels={type: 'elec capacity (KW)'}
+                           #labels={type: 'elec capacity (MW)'}
                         )
         break
     else:
@@ -97,7 +97,7 @@ for type in types[1:]:
                                    hover_name='canton_name',
                                    hover_data={'electrical_capacity': ':.1f', 'code': False},
                                    color_continuous_scale='YlGn',
-                                   labels={'electrical_capacity': 'elec capacity (KW)'})
+                                   labels={'electrical_capacity': 'elec capacity (MW)'})
 
 fig.update_layout(margin={"r":0,"t":45,"l":0,"b":0})
 fig.update_layout(title='Renewable Energy Capacity by Canton (MW)')
@@ -120,10 +120,10 @@ fig.update_layout(title='Renewable Energy Capacity by Canton (MW)')
 
 
 fig7 = go.Figure(data=[
-    go.Bar(x=df_grouped3.index, y=df_grouped3['Hydro'],name='hydro',marker_color='blue'),
-    go.Bar(x=df_grouped3.index, y=df_grouped3['Solar'],name='solar',marker_color='orange'),
-    go.Bar(x=df_grouped3.index, y=df_grouped3['Wind'],name='wind',marker_color='grey'),
-    go.Bar(x=df_grouped3.index, y=df_grouped3['Bioenergy'],name='bioenergie',marker_color='lightgreen')])
+    go.Bar(x=df_grouped3['canton_name'], y=df_grouped3['Hydro'],name='hydro',marker_color='blue'),
+    go.Bar(x=df_grouped3['canton_name'], y=df_grouped3['Solar'],name='solar',marker_color='orange'),
+    go.Bar(x=df_grouped3['canton_name'], y=df_grouped3['Wind'],name='wind',marker_color='grey'),
+    go.Bar(x=df_grouped3['canton_name'], y=df_grouped3['Bioenergy'],name='bioenergie',marker_color='lightgreen')])
 fig7.update_layout(margin={"r":0,"t":45,"l":0,"b":0})
 # Update the layout
 
