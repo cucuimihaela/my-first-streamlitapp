@@ -3,6 +3,7 @@ import plotly.express as px
 import plotly.io as pio
 import json
 import pandas as pd
+import plotly
 import plotly.graph_objects as go
 import seaborn as sns
 import streamlit as st
