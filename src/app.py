@@ -29,10 +29,10 @@ def load_data(path):
 
 
 
-mpg_df_raw = load_data(path="../data/raw/renewable_power_plants_CH.csv")
+mpg_df_raw = load_data(path="./data/raw/renewable_power_plants_CH.csv")
 df = deepcopy(mpg_df_raw)
 
-geojson_raw = load_data(path="../data/raw/georef-switzerland-kanton.geojson")
+geojson_raw = load_data(path="./data/raw/georef-switzerland-kanton.geojson")
 geojson = deepcopy(geojson_raw)
 
 #Connect the geojson to the dataframe
