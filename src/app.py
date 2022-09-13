@@ -131,7 +131,7 @@ fig7.update_layout(
     barmode="stack",
     plot_bgcolor="white",
     hovermode="x unified",
-    title={'text': "Renewable energy by type", "font": {"size": 24}}
+    title={'text': "Renewable energy by source for each canton", "font": {"size": 24}}
 )
 
 
