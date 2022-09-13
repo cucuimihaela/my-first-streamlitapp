@@ -84,10 +84,10 @@ for type in types[1:]:
         fig=  px.choropleth_mapbox(df_grouped3,geojson=geojson,mapbox_style="carto-positron", color=type,
                             locations="code",featureidkey="properties.kan_code",
                            center={"lat": 46.8182, "lon": 8.2275},zoom=6,
-                            #hover_name='canton_name',
+                            hover_name='canton_name',
                            hover_data={type: ':.1f', 'code': False},
                            color_continuous_scale='YlGn',
-                           #labels={'type': 'elec capacity (KW)'}
+                           labels={type: 'elec capacity (KW)'}
                         )
         break
     else:
