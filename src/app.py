@@ -67,7 +67,7 @@ fig10, ax = plt.subplots(nrows=1, ncols=1,figsize=(10,5))
 
 ax=squarify.plot(sizes=df_grouped_sq['electrical_capacity'], label=df_grouped_sq['label'], alpha=.8 ,
                  color=['orange','blue','lightgreen','grey'],pad=1,
-                     text_kwargs={'fontsize': 10})
+                     text_kwargs={'fontsize': 15})
 
 
 plt.axis('off')
